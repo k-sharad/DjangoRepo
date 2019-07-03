@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>emplyoees information page</title>
+</head>
+<body>
+
+{%if employees%}
+<h1>Employees Information</h1>
+<table>
+<tr>
+  <th>Emp No</th>
+  <th>Emp Name</th>
+  <th>Emp Sal</th>
+  <th>Emp Addr</th>
+  <th>Emp Phone</th>
+</tr>
+{% for r in employees %}
+<tr>
+  <th> {{ r.eno }}</th>
+  <th> {{ r.ename }}</th>
+  <th> {{ r.esal }}</th>
+  <th> {{ r.eaddress }}</th>
+  <th> {{ r.ephone }}</th>
+</tr>
+{% endfor %}
+</table>
+{%else%}
+<p>Records Not Found<p>
+{%endif%}
+</body>
+</html>
